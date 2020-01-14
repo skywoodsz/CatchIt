@@ -1,0 +1,24 @@
+<?xml version="1.0"  encoding = "UTF-8" ?>
+<robot name="sugar">
+  <link name="sugar">
+    <inertial>
+      <origin xyz="-1 0 0" />
+      <mass value="0.411" />
+      <inertia  ixx="1.0" ixy="0.0"  ixz="0.0"  iyy="1.0"  iyz="0.0"  izz="1.0" />
+    </inertial>
+    <visual>
+      <origin xyz="-1 0 0" rpy="-1.57 0 0" />
+      <geometry>
+        <mesh filename="package://ycb_model/cfg/test/texture_map.dae" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="-1 0 0" rpy="-1.57 0 0" />
+      <geometry>
+        <mesh filename="package://ycb_model/cfg/test/texture_map.dae" />
+      </geometry>
+    </collision>
+  </link>
+  <gazebo reference="sugar">
+    
+  </gazebo>

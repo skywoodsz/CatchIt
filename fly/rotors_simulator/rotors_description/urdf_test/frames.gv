@@ -1,0 +1,28 @@
+digraph G {
+"firefly/base_link" -> "rgbd_camera/base_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"world" -> "firefly/base_link"[label="Broadcaster: /gazebo\nAverage rate: 100.201 Hz\nMost recent transform: 130.970 ( 0.000 sec old)\nBuffer length: 4.980 sec\n"];
+"firefly/base_link" -> "firefly/base_link_inertia"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"rgbd_camera/base_link" -> "firefly/rgbd/camera_depth_2_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"firefly/rgbd/camera_depth_2_link" -> "firefly/rgbd/camera_depth_2_optical_center_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"rgbd_camera/base_link" -> "firefly/rgbd/camera_depth_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"firefly/rgbd/camera_depth_link" -> "firefly/rgbd/camera_depth_optical_center_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"rgbd_camera/base_link" -> "firefly/rgbd/camera_rgb_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"firefly/rgbd/camera_rgb_link" -> "firefly/rgbd/camera_rgb_optical_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"firefly/base_link" -> "base_groud_link_1"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"firefly/base_link" -> "base_groud_link_2"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10000.000 Hz\nMost recent transform: 0.000 ( 130.970 sec old)\nBuffer length: 0.000 sec\n"];
+"world" -> "firefly/odometry_sensor1"[label="Broadcaster: /gazebo\nAverage rate: 100.201 Hz\nMost recent transform: 130.970 ( 0.000 sec old)\nBuffer length: 4.980 sec\n"];
+"firefly/base_link" -> "firefly/rotor_0"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 59.677 Hz\nMost recent transform: 130.960 ( 0.010 sec old)\nBuffer length: 4.960 sec\n"];
+"firefly/base_link" -> "firefly/rotor_1"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 59.677 Hz\nMost recent transform: 130.960 ( 0.010 sec old)\nBuffer length: 4.960 sec\n"];
+"firefly/base_link" -> "firefly/rotor_2"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 59.677 Hz\nMost recent transform: 130.960 ( 0.010 sec old)\nBuffer length: 4.960 sec\n"];
+"firefly/base_link" -> "firefly/rotor_3"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 59.677 Hz\nMost recent transform: 130.960 ( 0.010 sec old)\nBuffer length: 4.960 sec\n"];
+"firefly/base_link" -> "firefly/rotor_4"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 59.677 Hz\nMost recent transform: 130.960 ( 0.010 sec old)\nBuffer length: 4.960 sec\n"];
+"firefly/base_link" -> "firefly/rotor_5"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 59.677 Hz\nMost recent transform: 130.960 ( 0.010 sec old)\nBuffer length: 4.960 sec\n"];
+"firefly/base_link" -> "firefly/imu_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 130.900 ( 0.070 sec old)\nBuffer length: 4.900 sec\n"];
+"firefly/base_link" -> "firefly/imugt_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 130.900 ( 0.070 sec old)\nBuffer length: 4.900 sec\n"];
+"firefly/base_link" -> "firefly/odometry_sensor1_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 130.900 ( 0.070 sec old)\nBuffer length: 4.900 sec\n"];
+"firefly/base_link" -> "firefly/odometry_sensorgt_link"[label="Broadcaster: /firefly/robot_state_publisher\nAverage rate: 10.204 Hz\nMost recent transform: 130.900 ( 0.070 sec old)\nBuffer length: 4.900 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 130.970"[ shape=plaintext ] ;
+ }->"world";
+}

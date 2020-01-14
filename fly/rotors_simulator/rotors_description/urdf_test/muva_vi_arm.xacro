@@ -1,0 +1,79 @@
+<?xml version="1.0"?>
+<robot name="firefly" xmlns:xacro="http://ros.org/wiki/xacro">
+  <arg name="mav_name" default="firefly"/>
+  <arg name="namespace" default="firefly"/>
+  <arg name="enable_logging" default="false" />
+  <arg name="enable_ground_truth" default="true" />
+  <arg name="enable_mavlink_interface" default="false"/>
+<!--$(arg mav_name)-->
+  <!-- Instantiate the mav with a generic odometry sensor. -->
+  <xacro:include filename="$(find rotors_description)/urdf/mav_generic_odometry_sensor.gazebo" />
+  <xacro:include filename="$(find rotors_description)/urdf/rgbd_base.xacro" />
+  <!--VI on the hand-->
+  <joint name="camera_hand_joint" type="fixed">
+    <origin xyz="0.05 0.02 0.02" rpy="0 0 0" />
+    <parent link="ee_link"/>
+    <child link="rgbd_camera/base_link"/>
+  </joint>
+  <xacro:rgbd_sensor_depth_macro
+    namespace="${namespace}/rgbd" parent_link="rgbd_camera/base_link"
+    camera_suffix="depth"
+    frame_rate="30.0"
+    fov = "1.59174"
+    baseline = "0.05"
+    width = "848"
+    height = "480"
+    max_range="50.0"
+    min_range="0.195">
+    <origin xyz="0.1 0.0 -0.03" rpy="-0.0447179 -0.0532737 1.23026" />
+  </xacro:rgbd_sensor_depth_macro>
+  <!--base_groud-->
+  <link name="base_groud_link_1">
+    <collision>
+      <origin xyz="0.0 0.116 -0.166" rpy="0 0 0" />
+      <geometry>
+        <box size="0.1 0.01 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <link name="base_groud_link_2">
+    <collision>
+      <origin xyz="0.0 -0.116 -0.166" rpy="0 0 0" /> <!--0.0 -0.116 -0.166-->
+      <geometry>
+        <box size="0.1 0.01 0.001"/>
+      </geometry>
+    </collision>
+  </link>
+  <joint name="groud_joint_1" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <parent link="${namespace}/base_link"/>
+    <child link="base_groud_link_1"/>
+  </joint>
+  <joint name="groud_joint_2" type="fixed">
+    <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0" />
+    <parent link="${namespace}/base_link"/>
+    <child link="base_groud_link_2"/>
+  </joint>
+  <!-- ur3 -->
+  <!-- common stuff -->
+  <xacro:include filename="$(find ur_description)/urdf/common.gazebo.xacro" />
+  <xacro:include filename="$(find ur_description)/urdf/ur3.urdf.xacro" />
+
+  <!-- arm -->
+  <xacro:ur3_robot prefix="" joint_limited="true"
+    shoulder_pan_lower_limit="${-pi}" shoulder_pan_upper_limit="${pi}"
+    shoulder_lift_lower_limit="${-pi}" shoulder_lift_upper_limit="${pi}"
+    elbow_joint_lower_limit="${-pi}" elbow_joint_upper_limit="${pi}"
+    wrist_1_lower_limit="${-pi}" wrist_1_upper_limit="${pi}"
+    wrist_2_lower_limit="${-pi}" wrist_2_upper_limit="${pi}"
+    wrist_3_lower_limit="${-pi}" wrist_3_upper_limit="${pi}"
+  />
+
+  <joint name="arm_joint" type="fixed">
+    <parent link="${namespace}/base_link" />
+    <child link= "base_link" />
+    <origin xyz="0.0 0.0 -0.004" rpy="0.0 3.14 3.14" />
+  </joint>
+
+
+</robot>
