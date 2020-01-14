@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<launch>
+  <arg name="config" default="true"/>
+  <arg name="sim" default="true"/>
+  
+  <!-- startup simulated world -->
+  <include file="$(find ur_gazebo)/launch/ur3.launch"/>
+
+  <!-- send robot urdf to param server -->
+  <include file="$(find ur3_moveit_config)/launch/ur3_moveit_planning_execution.launch">
+    <arg name="sim" value="$(arg sim)"/>
+  </include>
+
+  <include file="$(find ur3_moveit_config)/launch/moveit_rviz.launch">
+    <arg name="config" value="$(arg config)"/>
+  </include>
+</launch>
+
