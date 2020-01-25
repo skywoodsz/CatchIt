@@ -54,3 +54,6 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
    $ roslaunch uav_gazebo firefly_control.launch
    $ roslaunch dope dope.launch
 ```
+
+## Debug
+- The following ROS topics are published
