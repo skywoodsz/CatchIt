@@ -40,14 +40,14 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 ## Usage
    **1. Start ROS master** 
 ```
-$ roscore
-$ cd ~/catkin_ws
-$ source devel/setup.bash
+   $ roscore
+   $ cd ~/catkin_ws
+   $ source devel/setup.bash
 ```
  
    **2. Run the demo world** 
 ```
-    roslaunch uav_gazebo firfly_planning.launch
-    roslaunch uav_gazebo firefly_control.launch
-    roslaunch dope dope.launch
+   $ roslaunch uav_gazebo firfly_planning.launch
+   $ roslaunch uav_gazebo firefly_control.launch
+   $ roslaunch dope dope.launch
 ```
