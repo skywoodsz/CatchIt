@@ -1,4 +1,5 @@
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) 
+[![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 # CatchIt - ROS Inference
 This package used for autonomously search and grab objects in a large scale by unmanned aerial manipulators(UAM), which is based on ROS. We propose a novel detection and control framework for UAM to solve the problem of accurate grasping in a large-scale area, which consists of two stages: preliminary localization and precise localization. For more details, you can see [video](https://youtu.be/ycYlgfIKv6s).
 
