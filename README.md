@@ -22,8 +22,12 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 &ensp;**3. Install jsk_recognition** 
 
 &ensp;&ensp;&ensp;We use the jsk_recognition to progress the 3D infomation, you can install it as following these [instructions](https://github.com/jsk-ros-pkg/jsk_recognition).  
+
+&ensp;**4. Install ewok** 
+
+&ensp;&ensp;&ensp;We use the ewok for UAV path planning, you can install it as following these [instructions](https://github.com/VladyslavUsenko/ewok).  
     
-&ensp;**4. Create a catkin workspace** 
+&ensp;**5. Create a catkin workspace** 
 
 &ensp;&ensp;&ensp;To create a catkin workspace, follow these [instructions](http://wiki.ros.org/catkin/Tutorials/create_a_workspace):  
 ```
@@ -32,13 +36,13 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
     $ catkin_make
 ```
 
-&ensp;**5. Download the CatchIt code**
+&ensp;**6. Download the CatchIt code**
 ```
     $ cd ~/catkin_ws/src
     $ git clone https://github.com/skywoodsz/CatchIt.git
 ```
    
-&ensp; **6. Build**
+&ensp; **7. Build**
 ```
     $ cd ~/catkin_ws
     $ catkin_make
