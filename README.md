@@ -29,3 +29,9 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
     $ cd ~/catkin_ws/src
     $ git clone https://github.com/skywoodsz/CatchIt.git
 ```
+
+   **6. Build**
+```
+    $ cd ~/catkin_ws
+    $ catkin_make
+```
