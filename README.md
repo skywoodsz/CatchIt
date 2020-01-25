@@ -43,16 +43,16 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 ## Usage
    **1. Start ROS master** 
 ```
-   $ roscore
-   $ cd ~/catkin_ws
-   $ source devel/setup.bash
+    $ roscore
+    $ cd ~/catkin_ws
+    $ source devel/setup.bash
 ```
  
    **2. Run the demo world** 
 ```
-   $ roslaunch uav_gazebo firfly_planning.launch
-   $ roslaunch uav_gazebo firefly_control.launch
-   $ roslaunch dope dope.launch
+    $ roslaunch uav_gazebo firfly_planning.launch
+    $ roslaunch uav_gazebo firefly_control.launch
+    $ roslaunch dope dope.launch
 ```
 
 ## Debug
@@ -70,7 +70,7 @@ Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more 
      ADD the Image -> /firefly/rgbd_uav/camera_rgb/image_raw           # camera one image(UAV overlook camera)
      ADD the Image -> /firefly/rgbd/camera_depth/camera/image_raw      # camera two image(wrist's camera)
      ADD the PointCloud2 -> /firefly/rgbd/camera_depth_2/depth/points  # camera two pointcloud
-     ADD the PointCloud2 -> filter_pcl # Processed point cloud
+     ADD the PointCloud2 -> filter_pcl                                 # Processed point cloud
      ADD the BoundingBoxArray -> /bounding_boxs                        # 3D bounding box of potentially possible objects
      ADD the Imgae -> /dope/rgb_points                                 # dope 6D estimate
-``` 
+```  
