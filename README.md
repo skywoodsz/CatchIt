@@ -7,11 +7,12 @@ Note: We only provide relevant data and models. The project is under the constru
 
 ## Install
 We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050Ti with python 2.7,python 3.5 and C++11. The following steps describe the native installation. 
-1. Install ROS 
+### 1. Install ROS   
     Follow these [instructions](http://wiki.ros.org/kinetic/Installation/Ubuntu). And we recommend installing ros-kinetic-desktop-full.
-2. Install RotorS
+### 2. Install RotorS  
     We use the RotorS as the UAV, so you should install RotorS as following these [instructions](https://github.com/ethz-asl/rotors_simulator).
-3. Install jsk_recognition
-    We use the jsk_recognition to progress the 3D infomation, you can install it as following these [instructions](https://github.com/jsk-ros-pkg/jsk_recognition).
+### 3. Install jsk_recognition  
+    We use the jsk_recognition to progress the 3D infomation, you can install it as following these     
+    [instructions](https://github.com/jsk-ros-pkg/jsk_recognition).
 
 
