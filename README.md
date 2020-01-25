@@ -19,7 +19,7 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 &ensp;**3. Install jsk_recognition**  
 &ensp;&ensp;&ensp;We use the jsk_recognition to progress the 3D infomation, you can install it as following these [instructions](https://github.com/jsk-ros-pkg/jsk_recognition).  
     
-&ensp; **4. Create a catkin workspace**  
+&ensp;**4. Create a catkin workspace**  
 &ensp;&ensp;&ensp;To create a catkin workspace, follow these [instructions](http://wiki.ros.org/catkin/Tutorials/create_a_workspace):  
 ```
     $ mkdir -p ~/catkin_ws/src  # Replace `catkin_ws` with the name of your workspace
@@ -47,7 +47,7 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
      $ cd ~/catkin_ws
      $ source devel/setup.bash
 ```
-&ensp; **2. Run the demo world** 
+&ensp;**2. Run the demo world** 
 ```
      $ roslaunch uav_arm_gazebo firfly_planning.launch
      $ roslaunch uav_arm_gazebo firefly_conrtol.launch
