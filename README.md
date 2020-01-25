@@ -19,7 +19,11 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 **4. Create a catkin workspace**
     To create a catkin workspace, follow these [instructions](http://wiki.ros.org/catkin/Tutorials/create_a_workspace):  
     ```
-    $ mkdir -p ~/catkin_ws/src  <br>
-    $ cd ~/catkin_ws/  
+    $ mkdir -p ~/catkin_ws/src
+    
+    
+    $ cd ~/catkin_ws/
+    
+    
     $ catkin_make  
     ```
