@@ -56,4 +56,12 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 ```
 
 ## Debug
-- The following ROS topics are published
+- The following ROS topics are published:
+```
+    /filter_pcl                 # Processed point cloud
+    /bounding_boxs              # 3D bounding box of potentially possible objects
+    /gripper_open_close         # gripper control information
+    /dope/pose_[obj_name]       # timestamped pose of object
+```
+
+Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more details, you can see the [doc](https://github.com/NVlabs/Deep_Object_Pose)
