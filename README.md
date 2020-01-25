@@ -44,7 +44,10 @@ $ roscore
 $ cd ~/catkin_ws
 $ source devel/setup.bash
 ```
- **2. Run the demo world** 
+ 
+   **2. Run the demo world** 
 ```
     roslaunch uav_gazebo firfly_planning.launch
+    roslaunch uav_gazebo firefly_control.launch
+    roslaunch dope dope.launch
 ```
