@@ -1,10 +1,10 @@
-[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/) 
+[![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)  
 [![996.icu](https://img.shields.io/badge/link-996.icu-red.svg)](https://996.icu)
 [![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 # CatchIt - ROS Inference
 This package used for autonomously search and grab objects in a large scale by unmanned aerial manipulators(UAM), which is based on ROS. We propose a novel detection and control framework for UAM to solve the problem of accurate grasping in a large-scale area, which consists of two stages: preliminary localization and precise localization. For more details, you can see [video](https://youtu.be/ycYlgfIKv6s).
 
-Note: We only provide relevant data and models. The project is under the construction.
+*Note: We only provide relevant data and models. The project is under the construction.*
 
 ![image](https://github.com/skywoodsz/CatchIt/blob/master/grasp_sucussuful.png)
 
@@ -40,19 +40,18 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
     $ echo "source ~/catkin_ws/devel/setup.bash" >> ~/.bashrc
 ```
 
-## Usage
+## Run
    **1. Start ROS master** 
 ```
-    $ roscore
-    $ cd ~/catkin_ws
-    $ source devel/setup.bash
+     $ roscore
+     $ cd ~/catkin_ws
+     $ source devel/setup.bash
 ```
- 
    **2. Run the demo world** 
 ```
-    $ roslaunch uav_gazebo firfly_planning.launch
-    $ roslaunch uav_gazebo firefly_control.launch
-    $ roslaunch dope dope.launch
+     $ roslaunch uav_arm_gazebo firfly_planning.launch
+     $ roslaunch uav_arm_gazebo firefly_conrtol.launch
+     $ roslaunch dope dope.launch
 ```
 
 ## Debug
@@ -64,7 +63,8 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
     /dope/pose_[obj_name]       # timestamped pose of object
 ```
 
-Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more details, you can see the [doc](https://github.com/NVlabs/Deep_Object_Pose).  
+*Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more details, you can see the [doc](https://github.com/NVlabs/Deep_Object_Pose).*  
+
 - You also can debug in RViz, add one or more of the following displays:
 ```
      ADD the Image -> /firefly/rgbd_uav/camera_rgb/image_raw           # camera one image(UAV overlook camera)
@@ -73,4 +73,29 @@ Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more 
      ADD the PointCloud2 -> filter_pcl                                 # Processed point cloud
      ADD the BoundingBoxArray -> /bounding_boxs                        # 3D bounding box of potentially possible objects
      ADD the Imgae -> /dope/rgb_points                                 # dope 6D estimate
-```  
+```    
+
+## Citation
+
+## License
+Licensed under the [GPL License](https://opensource.org/licenses/GPL-3.0/).
+
+## Contact
+Contact: Tianlin Zhang. Email: skywoodsz@stu.csust.edu.cn
+
+
+
+
+
+
+    
+
+
+
+    
+    
+
+
+
+    
+
