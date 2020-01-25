@@ -64,4 +64,7 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
     /dope/pose_[obj_name]       # timestamped pose of object
 ```
 
-Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more details, you can see the [doc](https://github.com/NVlabs/Deep_Object_Pose)
+Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more details, you can see the [doc](https://github.com/NVlabs/Deep_Object_Pose).  
+
+- You also can debug in RViz, add one or more of the following displays:
+
