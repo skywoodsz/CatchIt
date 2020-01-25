@@ -55,7 +55,7 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 &ensp;**2. Run the demo world** 
 ```
      $ roslaunch uav_arm_gazebo firfly_planning.launch
-     $ roslaunch uav_arm_gazebo firefly_conrtol.launch
+     $ roslaunch uav_arm_gazebo firefly_control.launch
      $ roslaunch dope dope.launch
 ```
 
@@ -70,11 +70,11 @@ We have tested on Ubuntu 16.04 with ROS Kinetic and Gazebo 7 with an NVIDIA 1050
 
 &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;*Note: [obj_name] is in {cracker, gelatin, meat, mustard, soup, sugar}, for more details, you can see the [doc](https://github.com/NVlabs/Deep_Object_Pose).*  
 
-- You also can debug in RViz, add one or more of the following displays:
+- You can debug in RViz, add one or more of the following displays:
 ```
      ADD the Image -> /firefly/rgbd_uav/camera_rgb/image_raw           # camera one image(UAV overlook camera)
      ADD the Image -> /firefly/rgbd/camera_depth/camera/image_raw      # camera two image(wrist's camera)
-     ADD the PointCloud2 -> /firefly/rgbd/camera_depth_2/depth/points  # camera two pointcloud
+     ADD the PointCloud2 -> /firefly/rgbd/camera_depth_2/depth/points  # camera two point cloud
      ADD the PointCloud2 -> filter_pcl                                 # Processed point cloud
      ADD the BoundingBoxArray -> /bounding_boxs                        # 3D bounding box of potentially possible objects
      ADD the Imgae -> /dope/rgb_points                                 # dope 6D estimate
